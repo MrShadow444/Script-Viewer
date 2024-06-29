@@ -27,10 +27,13 @@ local function CrawlInstances(Inst)
         Iris.SameLine() do
             if Instance:IsA("LocalScript") or Instance:IsA("ModuleScript") then
                 if Iris.SmallButton({"View Script"}).clicked then
+                    print("Decompile Button Clicked for: " .. Instance.Name)
                     local success, result = pcall(function() return decompile(Instance) end)
                     if success then
+                        print("Decompile Success")
                         ScriptContent = result
                     else
+                        print("Decompile Failed: " .. tostring(result))
                         ScriptContent = "Failed to decompile script: " .. tostring(result)
                     end
                 end
