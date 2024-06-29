@@ -1,3 +1,3 @@
-# Script-Viewer MikeExplorer
+# Script-Viewer Beta
 
-This script not mine!
+Credits : ChatGpt
